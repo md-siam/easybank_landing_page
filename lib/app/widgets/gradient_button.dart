@@ -32,26 +32,3 @@ class GradientButton extends StatelessWidget {
     );
   }
 }
-
-
-// GradientButton(
-//                 onPressed: () {
-//                   print('object');
-//                 },
-//                 child: Padding(
-//                   padding: const EdgeInsets.only(
-//                     top: 10.0,
-//                     bottom: 10.0,
-//                     left: 15.0,
-//                     right: 15.0,
-//                   ),
-//                   child: const Text(
-//                     'Request Invite',
-//                     style: TextStyle(
-//                       color: Colors.white,
-//                       fontSize: 25,
-//                       fontWeight: FontWeight.bold,
-//                     ),
-//                   ),
-//                 ),
-//               ),

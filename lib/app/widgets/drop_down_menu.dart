@@ -100,6 +100,20 @@ class _DropDownMenuState extends State<DropDownMenu>
                     decoration: BoxDecoration(
                       color: widget.backgroundColor,
                       borderRadius: _borderRadius,
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black12,
+                          offset: Offset(1.0, 2.0),
+                          blurRadius: 5.0,
+                          spreadRadius: 2.0,
+                        ), //BoxShadow
+                        BoxShadow(
+                          color: Colors.white,
+                          offset: Offset(0.0, 0.0),
+                          blurRadius: 0.0,
+                          spreadRadius: 0.0,
+                        ), //BoxShadow
+                      ],
                     ),
                     child: Column(
                       children: List.generate(
