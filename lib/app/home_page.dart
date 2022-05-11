@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'widgets/constant.dart';
@@ -13,17 +14,25 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final ScrollController _scrollController = ScrollController();
+  late final ScrollController _scrollController;
+  bool fabIsVisible = false;
 
   @override
   void initState() {
     super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(() {
+      setState(() {
+        fabIsVisible = _scrollController.position.userScrollDirection ==
+            ScrollDirection.reverse;
+      });
+    });
   }
 
   @override
   void dispose() {
-    _scrollController.dispose();
     super.dispose();
+    _scrollController.dispose();
   }
 
   @override
@@ -72,7 +81,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const SizedBox(height: 70.0),
                     Container(
-                      height: 2000,
                       width: double.infinity,
                       padding: const EdgeInsets.symmetric(vertical: 40),
                       color: Colors.grey[200],
@@ -122,15 +130,30 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.arrow_upward_outlined),
-        onPressed: () {
-          _scrollController.animateTo(
-            0,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.easeIn,
-          );
-        },
+      floatingActionButton: AnimatedOpacity(
+        duration: const Duration(milliseconds: 100),
+        opacity: fabIsVisible ? 1 : 0,
+        child: FloatingActionButton(
+          child: Container(
+            width: 60,
+            height: 60,
+            child: const Icon(Icons.arrow_upward_outlined, size: 30),
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                colors: [Color(0xff00F260), Color(0xff2AB9D2)],
+              ),
+            ),
+          ),
+          onPressed: () {
+            _scrollController.animateTo(
+              0,
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeIn,
+            );
+          },
+        ),
       ),
     );
   }

@@ -149,7 +149,7 @@ class _DropDownMenuState extends State<DropDownMenu>
             break;
           case 2:
             _snackBarMessage(
-              const Icon(Icons.contact_mail, color: Colors.white),
+              const Icon(Icons.contact_phone, color: Colors.white),
               'Contact',
             );
             break;
