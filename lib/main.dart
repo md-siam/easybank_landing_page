@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Public_Sans',
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.teal,
       ),
       home: const HomePage(),
     );
