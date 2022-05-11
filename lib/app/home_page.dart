@@ -13,32 +13,34 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            backgroundImage(),
-            Container(
-              padding: const EdgeInsets.only(left: 20, right: 16),
-              height: 50,
-              color: const Color(0xFFFAFAFA),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SvgPicture.asset('assets/images/logo.svg'),
-                  DropDownMenu(
-                    backgroundColor: const Color(0xFFD6F0F4),
-                    borderRadius: BorderRadius.circular(10.0),
-                    title: const [
-                      'Home',
-                      'About',
-                      'Contact',
-                      'Blog',
-                      'Careers',
-                    ],
-                  )
-                ],
-              ),
-            ),
+            backgroundImage(context),
+            topAppBar(),
           ],
         ),
       ),
     );
   }
+
+  Widget topAppBar() => Container(
+        padding: const EdgeInsets.only(left: 20, right: 16),
+        height: 50,
+        color: const Color(0xFFFAFAFA),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SvgPicture.asset('assets/images/logo.svg'),
+            DropDownMenu(
+              backgroundColor: const Color(0xFFD6F0F4),
+              borderRadius: BorderRadius.circular(10.0),
+              title: const [
+                'Home',
+                'About',
+                'Contact',
+                'Blog',
+                'Careers',
+              ],
+            )
+          ],
+        ),
+      );
 }
