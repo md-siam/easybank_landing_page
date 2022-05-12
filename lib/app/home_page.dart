@@ -4,7 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'widgets/constant.dart';
 import 'widgets/drop_down_menu.dart';
+import 'widgets/footer.dart';
 import 'widgets/gradient_button.dart';
+import 'widgets/latest_article_card.dart';
+import 'widgets/why_easy_bank.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     _scrollController.addListener(() {
       setState(() {
         fabIsVisible = _scrollController.position.userScrollDirection ==
-            ScrollDirection.reverse;
+            ScrollDirection.forward;
       });
     });
   }
@@ -66,17 +69,9 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(height: 20),
                     GradientButton(
                       onPressed: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                          top: 10.0,
-                          bottom: 10.0,
-                          left: 15.0,
-                          right: 15.0,
-                        ),
-                        child: Text(
-                          'Request Invite',
-                          style: buttonTextStyle,
-                        ),
+                      child: Text(
+                        'Request Invite',
+                        style: buttonTextStyle1,
                       ),
                     ),
                     const SizedBox(height: 70.0),
@@ -100,28 +95,86 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           const SizedBox(height: 50),
-                          whyChooseEasyBank(
-                              'assets/images/icon-online.svg',
-                              'Online Banking',
-                              'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world'),
+                          const WhyEasyBank(
+                            imageURL: 'assets/images/icon-online.svg',
+                            title: 'Online Banking',
+                            subtitle:
+                                'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world',
+                          ),
                           const SizedBox(height: 50),
-                          whyChooseEasyBank(
-                              'assets/images/icon-budgeting.svg',
-                              'Simple Budgeting',
-                              'See exactly where your money goes each month. Receive notification when you\'re close to your hitting limits.'),
+                          const WhyEasyBank(
+                            imageURL: 'assets/images/icon-budgeting.svg',
+                            title: 'Simple Budgeting',
+                            subtitle:
+                                'See exactly where your money goes each month. Receive notification when you\'re close to your hitting limits.',
+                          ),
                           const SizedBox(height: 50),
-                          whyChooseEasyBank(
-                              'assets/images/icon-onboarding.svg',
-                              'Fast Onboarding',
-                              'We don\'t do branches. Open your account in minutes online and start taking control of your finances right away.'),
+                          const WhyEasyBank(
+                            imageURL: 'assets/images/icon-onboarding.svg',
+                            title: 'Fast Onboarding',
+                            subtitle:
+                                'We don\'t do branches. Open your account in minutes online and start taking control of your finances right away.',
+                          ),
                           const SizedBox(height: 50),
-                          whyChooseEasyBank(
-                              'assets/images/icon-api.svg',
-                              'Open API',
-                              'Manage your savings, investments, pension, and much more from one account. Tracking your money never been easier.'),
+                          const WhyEasyBank(
+                            imageURL: 'assets/images/icon-api.svg',
+                            title: 'Open API',
+                            subtitle:
+                                'Manage your savings, investments, pension, and much more from one account. Tracking your money never been easier.',
+                          ),
                         ],
                       ),
                     ),
+                    const SizedBox(height: 50),
+                    Text(
+                      'Latest Article',
+                      style: titleTextStyle1,
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 40),
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(vertical: 40),
+                      color: Colors.white,
+                      child: Column(
+                        children: const [
+                          LatestArticleCard(
+                            imageURL: 'assets/images/image-currency.jpg',
+                            author: 'Claire Robinson',
+                            title: 'Receive money in any currency with no fees',
+                            bodyText:
+                                'The world is getting smaller and we\'re becoming more mobile, So why should you be forced to only receive money in a single...',
+                          ),
+                          SizedBox(height: 30),
+                          LatestArticleCard(
+                            imageURL: 'assets/images/image-restaurant.jpg',
+                            author: 'Wilson Hutton',
+                            title:
+                                'Treat yourself without worrying about money',
+                            bodyText:
+                                'Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you...',
+                          ),
+                          SizedBox(height: 30),
+                          LatestArticleCard(
+                            imageURL: 'assets/images/image-plane.jpg',
+                            author: 'Wilson Hutton',
+                            title: 'Take your Easybank card wherever you go',
+                            bodyText:
+                                'We want you to enjoy your travels. This is why we don\'t charge any fees on purchases while you\'re abroad. we\'ll even show you...',
+                          ),
+                          SizedBox(height: 30),
+                          LatestArticleCard(
+                            imageURL: 'assets/images/image-confetti.jpg',
+                            author: 'Claire Robinson',
+                            title:
+                                'Our invite-only Beta accounts are now live!',
+                            bodyText:
+                                'After a lot of hard work by the whole team, we\'re excited to launch our closed beta. It\'s easy to request an invite through the site...',
+                          ),
+                        ],
+                      ),
+                    ),
+                    const AppFooter()
                   ],
                 ),
               ),
@@ -183,29 +236,4 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       );
-
-  Widget whyChooseEasyBank(String imageURL, String title, String subtitle) {
-    return Column(
-      children: [
-        SvgPicture.asset(
-          imageURL,
-          width: 100,
-        ),
-        const SizedBox(height: 20),
-        Text(
-          title,
-          style: titleTextStyle2,
-          textAlign: TextAlign.center,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Text(
-            subtitle,
-            style: subtitleTextStyle2,
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ],
-    );
-  }
 }

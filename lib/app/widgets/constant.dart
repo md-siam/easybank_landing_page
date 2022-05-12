@@ -25,8 +25,16 @@ TextStyle subtitleTextStyle2 = const TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-TextStyle buttonTextStyle = const TextStyle(
+TextStyle buttonTextStyle1 = const TextStyle(
   color: Colors.white,
   fontSize: 25,
   fontWeight: FontWeight.bold,
 );
+
+TextStyle buttonTextStyle2 = const TextStyle(
+  color: Colors.white,
+  fontSize: 16,
+  fontWeight: FontWeight.bold,
+);
+
+
