@@ -18,7 +18,6 @@ class LatestArticleCard extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(8.0),
       child: Container(
-        height: 450,
         width: 330,
         color: Colors.grey[100],
         child: Column(
@@ -43,6 +42,7 @@ class LatestArticleCard extends StatelessWidget {
                     bodyText,
                     style: const TextStyle(fontSize: 16),
                   ),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),

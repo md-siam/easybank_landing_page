@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'controller/home_page_controller.dart';
 import 'widgets/constant.dart';
 import 'widgets/drop_down_menu.dart';
 import 'widgets/footer.dart';
@@ -95,32 +96,28 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           const SizedBox(height: 50),
-                          const WhyEasyBank(
-                            imageURL: 'assets/images/icon-online.svg',
-                            title: 'Online Banking',
-                            subtitle:
-                                'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world',
+                          WhyEasyBank(
+                            imageURL: whyEasybankList[0].imageURL,
+                            title: whyEasybankList[0].title,
+                            subtitle: whyEasybankList[0].description,
                           ),
                           const SizedBox(height: 50),
-                          const WhyEasyBank(
-                            imageURL: 'assets/images/icon-budgeting.svg',
-                            title: 'Simple Budgeting',
-                            subtitle:
-                                'See exactly where your money goes each month. Receive notification when you\'re close to your hitting limits.',
+                          WhyEasyBank(
+                            imageURL: whyEasybankList[1].imageURL,
+                            title: whyEasybankList[1].title,
+                            subtitle: whyEasybankList[1].description,
                           ),
                           const SizedBox(height: 50),
-                          const WhyEasyBank(
-                            imageURL: 'assets/images/icon-onboarding.svg',
-                            title: 'Fast Onboarding',
-                            subtitle:
-                                'We don\'t do branches. Open your account in minutes online and start taking control of your finances right away.',
+                          WhyEasyBank(
+                            imageURL: whyEasybankList[2].imageURL,
+                            title: whyEasybankList[2].title,
+                            subtitle: whyEasybankList[2].description,
                           ),
                           const SizedBox(height: 50),
-                          const WhyEasyBank(
-                            imageURL: 'assets/images/icon-api.svg',
-                            title: 'Open API',
-                            subtitle:
-                                'Manage your savings, investments, pension, and much more from one account. Tracking your money never been easier.',
+                          WhyEasyBank(
+                            imageURL: whyEasybankList[3].imageURL,
+                            title: whyEasybankList[3].title,
+                            subtitle: whyEasybankList[3].description,
                           ),
                         ],
                       ),
@@ -137,39 +134,33 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.symmetric(vertical: 40),
                       color: Colors.white,
                       child: Column(
-                        children: const [
+                        children: [
                           LatestArticleCard(
-                            imageURL: 'assets/images/image-currency.jpg',
-                            author: 'Claire Robinson',
-                            title: 'Receive money in any currency with no fees',
-                            bodyText:
-                                'The world is getting smaller and we\'re becoming more mobile, So why should you be forced to only receive money in a single...',
+                            imageURL: latestArticleList[0].imageURL,
+                            author: latestArticleList[0].author,
+                            title: latestArticleList[0].title,
+                            bodyText: latestArticleList[0].description,
                           ),
-                          SizedBox(height: 30),
+                          const SizedBox(height: 30),
                           LatestArticleCard(
-                            imageURL: 'assets/images/image-restaurant.jpg',
-                            author: 'Wilson Hutton',
-                            title:
-                                'Treat yourself without worrying about money',
-                            bodyText:
-                                'Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you...',
+                            imageURL: latestArticleList[1].imageURL,
+                            author: latestArticleList[1].author,
+                            title: latestArticleList[1].title,
+                            bodyText: latestArticleList[1].description,
                           ),
-                          SizedBox(height: 30),
+                          const SizedBox(height: 30),
                           LatestArticleCard(
-                            imageURL: 'assets/images/image-plane.jpg',
-                            author: 'Wilson Hutton',
-                            title: 'Take your Easybank card wherever you go',
-                            bodyText:
-                                'We want you to enjoy your travels. This is why we don\'t charge any fees on purchases while you\'re abroad. we\'ll even show you...',
+                            imageURL: latestArticleList[2].imageURL,
+                            author: latestArticleList[2].author,
+                            title: latestArticleList[2].title,
+                            bodyText: latestArticleList[2].description,
                           ),
-                          SizedBox(height: 30),
+                          const SizedBox(height: 30),
                           LatestArticleCard(
-                            imageURL: 'assets/images/image-confetti.jpg',
-                            author: 'Claire Robinson',
-                            title:
-                                'Our invite-only Beta accounts are now live!',
-                            bodyText:
-                                'After a lot of hard work by the whole team, we\'re excited to launch our closed beta. It\'s easy to request an invite through the site...',
+                            imageURL: latestArticleList[3].imageURL,
+                            author: latestArticleList[3].author,
+                            title: latestArticleList[3].title,
+                            bodyText: latestArticleList[3].description,
                           ),
                         ],
                       ),
@@ -224,13 +215,7 @@ class _HomePageState extends State<HomePage> {
               DropDownMenu(
                 backgroundColor: Colors.white,
                 borderRadius: BorderRadius.circular(10.0),
-                title: const [
-                  'Home',
-                  'About',
-                  'Contact',
-                  'Blog',
-                  'Careers',
-                ],
+                title: const ['Home', 'About', 'Contact', 'Blog', 'Careers'],
               )
             ],
           ),

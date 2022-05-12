@@ -80,7 +80,7 @@ class _DropDownMenuState extends State<DropDownMenu>
     return OverlayEntry(
       builder: (context) {
         return Positioned(
-          top: 75.0,
+          top: 80.0,
           right: 0.0,
           child: Material(
             color: Colors.transparent,
