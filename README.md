@@ -23,7 +23,7 @@ This application is using one third-party package from the open-source community
 - Weights: 300, 400, 700
 ```
 
-## Tip Calculator App Demo
+## Easybank App Demo
 
 <p align="center"><img src="screenshots/gif/demo.gif"></p>
 
