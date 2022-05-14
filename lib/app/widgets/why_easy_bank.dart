@@ -4,8 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'constant.dart';
 
 class WhyEasyBank extends StatelessWidget {
-   final String imageURL;
- final  String title;
+  final String imageURL;
+  final String title;
   final String subtitle;
   const WhyEasyBank({
     Key? key,
