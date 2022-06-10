@@ -13,7 +13,7 @@ This application is an UI challenge from <a href = "https://www.frontendmentor.i
 This application is using one third-party package from the open-source community. Thanks to the developers of <a href = "https://pub.dev/packages/flutter_svg">flutter_svg: ^1.0.3 </a> for this amazing package. The purpose of using this package is to enable the support of SVG files in the flutter application. It's a Dart-native rendering library.
 
 ```
-  flutter_svg: ^1.0.3   //For rendering svg images
+  flutter_svg: ^1.1.0   //For rendering svg images
 ```
 
 ## Font
@@ -30,14 +30,14 @@ This application is using one third-party package from the open-source community
 ## File Pattern Inside The `lib` Folder
 
 ```
-lib
-├── app
-│   ├── controller
+lib/
+├── app/
+│   ├── controller/
 │   │   └── home_page_controller.dart
-│   ├── model
+│   ├── model/
 │   │   └── home_page_model.dart
-│   ├── widgets
-│   │   ├── utils
+│   ├── widgets/
+│   │   ├── utils/
 │   │   │   └── arrow_clipper.dart
 │   │   ├── constant.dart
 │   │   ├── drop_down_menu.dart

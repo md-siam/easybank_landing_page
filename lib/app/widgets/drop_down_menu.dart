@@ -14,6 +14,7 @@ class DropDownMenu extends StatefulWidget {
     this.backgroundColor = const Color(0xFF67C0B9),
   }) : super(key: key);
   @override
+  // ignore: library_private_types_in_public_api
   _DropDownMenuState createState() => _DropDownMenuState();
 }
 

@@ -32,8 +32,8 @@ class GradientButton extends StatelessWidget {
         splashColor: Colors.amber,
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         shape: const StadiumBorder(),
-        child: child,
         onPressed: onPressed,
+        child: child,
       ),
     );
   }

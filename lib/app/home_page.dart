@@ -181,7 +181,6 @@ class _HomePageState extends State<HomePage> {
           child: Container(
             width: 60,
             height: 60,
-            child: const Icon(Icons.arrow_upward_outlined, size: 30),
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
               gradient: LinearGradient(
@@ -189,6 +188,7 @@ class _HomePageState extends State<HomePage> {
                 colors: [Color(0xff00F260), Color(0xff2AB9D2)],
               ),
             ),
+            child: const Icon(Icons.arrow_upward_outlined, size: 30),
           ),
           onPressed: () {
             _scrollController.animateTo(
