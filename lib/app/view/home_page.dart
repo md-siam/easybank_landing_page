@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'controller/home_page_controller.dart';
-import 'widgets/constant.dart';
-import 'widgets/drop_down_menu.dart';
-import 'widgets/footer.dart';
-import 'widgets/gradient_button.dart';
-import 'widgets/latest_article_card.dart';
-import 'widgets/why_easy_bank.dart';
+import '../controller/home_page_controller.dart';
+import '../widgets/constant.dart';
+import '../widgets/drop_down_menu.dart';
+import '../widgets/footer.dart';
+import '../widgets/gradient_button.dart';
+import '../widgets/latest_article_card.dart';
+import '../widgets/why_easy_bank.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

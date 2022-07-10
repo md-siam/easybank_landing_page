@@ -16,12 +16,18 @@ This application is using one third-party package from the open-source community
   flutter_svg: ^1.1.0   //For rendering svg images
 ```
 
-## Font
+## Font Used
 
 ```
 - Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
 - Weights: 300, 400, 700
 ```
+
+## Download APK File
+
+<p align="center">
+    <a href="https://drive.google.com/file/d/1Z0KrvjjCveCNH7U-wovB9wwPpgcc-JQY/view?usp=sharing" target="_blank"><img src="screenshots/download_apk/apk-download-badge.png" height="100" ></img></a>
+</p>
 
 ## Easybank App Demo
 
@@ -36,15 +42,16 @@ lib/
 │   │   └── home_page_controller.dart
 │   ├── model/
 │   │   └── home_page_model.dart
-│   ├── widgets/
-│   │   ├── utils/
-│   │   │   └── arrow_clipper.dart
-│   │   ├── constant.dart
-│   │   ├── drop_down_menu.dart
-│   │   ├── footer.dart
-│   │   ├── gradient_button.dart
-│   │   ├── latest_article_card.dart
-│   │   └── why_easy_bank.dart
-│   └── home_page.dart
+│   ├── view/
+│   │   └── home_page.dart
+│   └── widgets/
+│       ├── utils/
+│       │   └── arrow_clipper.dart
+│       ├── constant.dart
+│       ├── drop_down_menu.dart
+│       ├── footer.dart
+│       ├── gradient_button.dart
+│       ├── latest_article_card.dart
+│       └── why_easy_bank.dart
 └── main.dart
 ```
